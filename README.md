@@ -2,156 +2,257 @@
 ```
 BodyBuddy : 내 손안의 운동 친구
 ```
+<p align="center">
+  <img src = "https://user-images.githubusercontent.com/33833780/136685150-ea4c5503-1d80-4e16-915e-66d7b3ba91d5.png" width="900px">
+</p>
 
-<img src = "/images/logo_login.png" width="600px">
 
-## 목차
+<br><br>
 
-- [프로젝트 소개](#프로젝트-소개)     
-- [프로젝트 명세](#프로젝트-명세)
-  - [배포 환경](#배포-환경)
-  - [개발 환경](#개발-환경)
-  - [Design Resources](#design-resources)
-  - [핵심 라이브러리](#핵심-라이브러리)
-  <br>   
+## 🗂 Content
 
-   
+1. [🔈 프로젝트 소개](#-프로젝트-소개)
+   <br>
+   - [📑 타겟 및 목표](#-타겟-및-목표)
+   - [📑 개발 환경](#-개발-환경)
+   - [📑 Design Resources](#-디자인)
+   - [📑 기술 스택 아키텍쳐](#-기술-스택-아키텍쳐)
+   - [📑 ERD](#-erd)
+   - [📑 와이어프레임](#-와이어프레임)
+   - [📑 핵심 기능](#-핵심-기능)
+     <br>
+2. [🔈 구현 결과](#-구현-결과)
+     <br>
+3. [🔈 팀원 소개 및 역할](#-팀원-소개-및-역할)
+   <br>
+4. [🔈 개발 문서](#-개발-문서)
+  
+<br><br>
+
 ## 🔍 프로젝트 소개
 
 `BodyBuddy` : 내 손안의 운동 친구   
 
-<img src = "/images/need.png" width="600px">   
+<p align="center">
+  <img src = "https://user-images.githubusercontent.com/33833780/136685156-03cf1976-7875-43b9-931b-dd542084398c.png" width="800px">   
+</p>
 
 운동과 몸에 대한 **관심**이 증가하고 있고, 소통 및 연결의 **필요성**이 높아지고 있다.     
 **다이어트**를 하기 위해서, **바디프로필**을 찍기 위해서, **건강**을 관리하기 위해서 운동을 하고 서로 SNS로 공유를 한다.   
 운동 관련 앱들은 운동 튜토리얼 서비스 위주이며, **오늘의 운동을 기록하고 다른 사람들과 공유할 수 있는 운동 관리 플랫폼**은 없다.   
 
+<br>
+
+### 🔔 타겟 및 목표
+
+#### 🧿 타겟
+
+    ☝ 운동.. 다른 사람들과 함께 하고 싶다..! 하는 사람
+    ✌ 자신의 몸 상태를 다른 사람들한테 평가 받고 싶은 사람
+    🤟 자신의 몸 상태를 꾸준히 기록해서 남겨두고 싶은 사람
+
+#### 🏃‍ 목표
+
 ```
-BodyBuddy는
 몸과 운동에 관심이 있는 사람들이 모여 친구처럼 연결 되는 공간   
 나의 곁에서 운동을 돕고 동기부여해주는 친구 같은 서비스    
 ```
 
-<img src = "/images/function.png" width="600px"> 
+    ✔ 운동을 기록하고 변화를 비교한다.
+    ✔ 다른 사용자들과 소통하며 함께 운동 할 수 있다.
+    ✔ 챌린지에 도전함으로써 자신의 현재 상태를 다른 사용자들로 부터 피드백을 받을 수 있다.
+   
+<br><br>
 
-BodyBuddy는 운동을 기록하고 변화를 비교할 수 있다.   
-그리고 다른사람들과 소통하면서 자극도 받고 좀 더 즐겁게 운동 할 수 있다.   
-또한 챌린지에 도전함으로써 자신의 현재 몸 상태를 파악하고 다른 사람들의 몸을 평가하면서 동기도 부여 받을 수 있다.     
-따라서 BodyBuddy를 통해 즐겁게 운동할 수 있고 자극을통해 동기 부여를 받는 효과를 기대할 수 있다.   
+### 🔨 개발 환경
 
-<img src = "/images/effect.png" width="600px"> 
+- OS : Windows 10
 
-BodyBuddy의 핵심 기능은 크게 3가지이다.   
-**1. 운동 기록**   
-  - 쉽고 편하게 오늘의 운동을 기록한다.   
-  - 인바디, 사진, 파워리프팅을 기록하고 결과를 시각화하여 본다. 
-**2. 소통**   
-  - 같은 목표와 관심사를 가진 사람들과 소통하며 즐겁게 운동한다.   
-**3. 챌린지**   
-  - 운동을 통해 몸을 만들면서 챌린지에 도전하며 사람들의 평가를 받을 수 있다.   
-  - 다른 사람들의 몸을 보며 자극을 받을 수 있다.   
+- Server : AWS EC2
 
+  - Ubuntu 20.04.1
+  - Docker 20.10.8
+  - Jenkins
+  - Nginx
+  
+- Backend
 
-<br>
+  - Java : Java 1.8.0
+  - Framework : SpringBoot 2.2.2
+  - ORM : JPA(Hibernate)
+  - Nginx : 1.18.0 (Ubuntu)
+  - IDE : Intellij 2021.1.3 / Visual Studio Code 1.59
+  - Dependency tool : maven-4.0.0
 
-## 🔍 프로젝트 명세
-### 배포 환경
-- __URL__ : http://i5a105.p.ssafy.io/
-- __배포 여부__ : O
-- __접속 가능__ : 접속 가능
-- __HTTPS 적용__ : X
-- __PORT__ :
-젠킨스: http://i5a105.p.ssafy.io:8090/
-스웨거: http://i5a105.p.ssafy.io:8080/swagger-ui.html
+- Frontend 
 
-<br>
+    - HTML5, CSS3, Javascript(Es6) 
+    - Vue 2.0.0
+    - vuetify 2.4.0
+    - IDE : Visual Studio Code
+  
+- Database
 
-### 🔍 개발 환경
+    - MariaDB
+    - MongoDB
 
-<img src = "/images/techstack.png" width="500px">
+<br><br>
 
-#### Front-end / Web App
-- __Framework__ : Vue.js
-- __지원 환경__ : Web browser
-- __담당자__ : 안상훈, 신해민
-<br>
+### 🎨 디자인
 
-#### Back-end
-- __Framework__ : Spring boot
-- __Database__ : MariaDB, MongoDB
-- __담당자__ : 서정훈, 김선혜, 김채은 
-<br>
-
-#### Design
-- __Framework 사용__ : O
-  - [Vuetify](https://vuetifyjs.com/)
-  - [Element Plus](https://element-plus.org/)
-- __Design Tool 사용__ : 
-- __담당자__ : 안상훈, 김채은 ,김선혜
-<br>
-
-### 🔍 Design Resources
 __외부 템플릿 또는 에셋__
 - [Vue Argon Design System](https://www.creative-tim.com/product/vue-argon-design-system?affiliate_id=116187) (무료)
   - __사용 기능__ : 디자인 전반 적용
 - [Vue Black Dashboard Pro](https://www.creative-tim.com/product/vue-black-dashboard-pro?affiliate_id=116187) (유료)
   - __사용 기능__ : 캘린더 컴포넌트 사용
-  <br>
+  
+<br><br>
 
-__자체 제작 산출물__ (필요시 이미지 또는 설명 첨부)
-- LOGO
-- CardView
-- Button
-- Calendar
+### 🔨 기술 스택 아키텍쳐
+
+<p align="center">
+  <img src = "https://user-images.githubusercontent.com/33833780/136685157-25ae3f07-e708-4446-b118-ded17c548d0c.png" width="800px">
+</p>
+
+<br><br>
+
+### 🔍 ERD
+
+<p align="center">
+  <img src = "https://user-images.githubusercontent.com/33833780/136686792-961a26fe-df90-4fc2-8a26-74cdfabe5ff0.png" width="800px">
+</p>
+
+<br><br>
+
+### 🎨 와이어프레임
+
+<p align="center">
+  <img src = "https://user-images.githubusercontent.com/33833780/136686798-8dc73f54-3166-4535-be8c-f7e55a9af9b2.png" width="800px">
+</p>
+
+<br><br>
+
+### 💎 핵심 기능
+
+<p align="center">
+  <img src = "https://user-images.githubusercontent.com/33833780/136685154-9d60b1af-7dbf-4b73-beab-44927a883ce1.png" width="800px"> 
+</p>
+    
+    🔑 1. 운동 기록   
+        - 쉽고 편하게 오늘의 운동을 기록한다.   
+        - 인바디, 사진, 파워리프팅을 기록하고 결과를 시각화하여 본다. 
+    🔑 2. 소통 
+        - 같은 목표와 관심사를 가진 사람들과 소통하며 즐겁게 운동한다.   
+    🔑 3. 챌린지
+        - 운동을 통해 몸을 만들면서 챌린지에 도전하며 사람들의 평가를 받을 수 있다.   
+        - 다른 사람들의 몸을 보며 자극을 받을 수 있다.
+            
+<br><br>
+
+
+## 🥜 구현 결과
+
+### 🔗 운동 기록, 통계
+
+<p align="center">
+  <img src = "https://user-images.githubusercontent.com/33833780/136688042-7376d86a-63d4-4a71-b681-6d59c6172153.png" width="800px"> 
+</p>
+
 <br>
 
-### 🔍 핵심 라이브러리
-- __WebDesignrankings__
-  - __링크__ : https://www.webdesignrankings.com/resources/lolcolors/
-  - __소개__ : 색상 조합을 추천해주는 사이트
-  - __사용 기능__ : 여러가지 색상 조합 추천
-  - __담당자__ : 신해민, 김선혜, 김채은, 안상훈, 서정훈
+#### 🔗 챌린지
 
-- __Animate.css__
-  - __링크__ : https://animate.style/
-  - __소개__ : css 애니메이션 지원 라이브러리
-  - __사용 기능__ : 메인 페이지 진입 시 애니메이션 사용
-  - __담당자__ : 안상훈,
+<p align="center">
+  <img src = "https://user-images.githubusercontent.com/33833780/136688245-63de7854-1ed7-4bc5-875d-6031d8e22598.jpg" width="800px"> 
+</p>
 
-## 🔍 Git
-### Git Convention
-#### Default
-  - type : subject
-  - Body
-  - footer
-#### Types
-  - feat : 기획과 관련한 기능 추가 및 삭제
-  - fix  : 버그 수정 및 기존 기능 수정
-  - refactor : 리팩토링 (기능 수정 X) * 기능 수정과 리팩토링 구분해서 올려주세요.
-  - perf : 성능 향상을 위한 리팩토링
-  - style : code style 변경 (white-space, formatting, missing semi-colons, etc)
-  - test : 테스트 추가
-  - docs : 문서 추가/변경 (ReadMe.md)
-  - build: 빌드 관련 변경 (build tool, ci pipeline, dependencies, project version)
-  - chore : 그외 변경 ( .gitignore )
-#### subject
-  - required
-  - 59자 이하로 작성해주세요.
-  - 추가, 변경, 수정, 삭제, 개선 등 명사형 문장으로 작성
-  - 영문의 경우 명령형으로 작성
-  - 끝에 온점(.) 생략
-  - 파일명이나 함수명은 사용 X (코드에서 보여줄것임)
-  - ex) oo 기능 추가, 불필요한 코드 삭제
-#### Body
-  - optional
-  - 한 줄에 59자 이하
-  - 추가, 변경, 수정, 삭제, 개선 등 명사형 문장으로 작성
-  - subject 외 자세한 내용이 필요하다면 작성
-#### Examples
-  - feat: 엄청난 버튼 추가
-  - fix: <어떤 이유>인한 oo 컴포넌트 버그 수정
-  - fix: 오타 수정
-  - build: package.json dependency 업데이트
-  - refactor: oo 컴포넌트 구조 리팩토링
-  - style: white space 제거
+<br><br>
 
+#### 🔗 피드, 기타 화면
+
+<p align="center">
+  <img src = "https://user-images.githubusercontent.com/33833780/136688651-e7a93096-f38d-407f-b07f-13adc95d2963.png" width="800px"> 
+</p>
+
+<br><br>
+
+------------
+
+## 🥜 실행 가이드
+
+#### 설치 & 실행   
+```
+$ sudo apt install maven   
+$ sudo apt-get install -y nodejs   
+$ mvn clean package   
+$ npm run serve   
+```
+
+#### 배포 환경 구성   
+[install Docker]   
+```
+$ sudo apt update && apt upgrade   
+$ sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common   
+$ sudo apt-get update && sudo apt-get install docker-ce docker-ce-cli containerd.io   
+```
+
+[도커에 MariaDB 컨테이너 올리기]   
+```
+$ sudo docker pull mariadb:latest
+$ sudo docker run --name mariadb -p 3306:3306 -e MYSQL_ROOT_PASSWORD=bodya105@ -d mariadb
+$ docker container start mariadb
+```
+
+[도커에 Jenkins 컨테이너 올리기]   
+```
+$ docker pull jenkins/Jenkins   
+$ docker run --name jenkins -d -p 8090:8080 -v /home/jenkins:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock v $(which docker):/usr/bin/docker -u root jenkins/jenkins   
+```
+[install mvn / nodejs in Jenkins]   
+```
+$ sudo apt install maven   
+$ sudo apt-get install -y nodejs   
+```
+
+[build]   
+```
+$ mvn clean package   
+$ npm run build   
+```
+
+[도커에 백엔드 서버, 웹서버 Deploy]   
+-	Spring Boot   
+```
+$ docker container stop   
+$ docker container rm   
+$ docker rmi back:0.1   
+$ docker build -t back:0.1 .   
+$ docker run -d --name backend -p 8080:8080 --network network back:0.1   
+```
+
+-	Nginx   
+```
+$ docker container stop   
+$ docker container rm   
+$ docker rmi front:0.1   
+$ docker build -t front:0.1 .   
+$ docker run -d --name frontend -p 80:80 --network network front:0.1   
+```
+
+<br><br>
+
+## 🥜 팀원 소개 및 역할
+
+<br><br>
+|Name|김선혜|김채은|서정훈|안상훈|
+|-----|-----|-----|-----|-----|
+|Position|Backend (+ Frontend) & CI/CD|Backend (+ Frontend)|Backend (+ Frontend)|Frontend|
+|Git|@wkadnsj|kce0531|jhidzz|ahnsang9|
+
+<br><br>
+
+## 🥜 개발 문서
+
+#### [ 📑 Git 컨벤션 ](https://dandelion-leopon-581.notion.site/1f1fc1c904264a7787663b98ba1f4532)
+
+<br>
