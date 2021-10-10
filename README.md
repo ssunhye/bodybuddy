@@ -247,7 +247,7 @@ $ docker run -d --name frontend -p 80:80 --network network front:0.1
 |Name|김선혜|김채은|서정훈|안상훈|
 |-----|-----|-----|-----|-----|
 |Position|Backend (+ Frontend) & CI/CD|Backend (+ Frontend)|Backend (+ Frontend)|Frontend|
-|Git|@wkadnsj|kce0531|jhidzz|ahnsang9|
+|Git|@wkadnsj|@kce0531|@jhidzz|@ahnsang9|
 
 <br><br>
 
